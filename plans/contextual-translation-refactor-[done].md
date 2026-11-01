@@ -20,4 +20,4 @@ Implemented. `luajit tests/pure_spec.lua` passed, and every plugin Lua file pass
 
 The OpenAI prompt was subsequently refined to preserve formality, allow faithful rephrasing, and treat selected text and context as data rather than instructions. The same tests and syntax checks passed after that change.
 
-Later product decisions broadened the plugin into contextual translation with brief notes. All providers now share one prompt, and the output is requested as plain text for KOReader. Version `0.3.2` was installed on the Kindle and the copied files were verified. The original OpenAI-only scope above records the initial refactor request.
+Later product decisions broadened the plugin into contextual translation with brief notes. All providers now share one prompt, and the output is requested as plain text for KOReader. Version `0.3.2` was installed on the Kindle and the copied files were verified. The user confirmed that the OpenAI translation worked well on the Kindle. Gemini and custom-provider results still need device testing. The original OpenAI-only scope above records the initial refactor request.
