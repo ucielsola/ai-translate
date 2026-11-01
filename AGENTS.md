@@ -14,6 +14,7 @@ Este repositorio contiene un plugin independiente de KOReader que ofrece una tra
 - Probar la lógica pura de Lua fuera de KOReader siempre que sea posible.
 - Como no se dispone del emulador de KOReader, reservar las pruebas visuales y de interacción final para el Kindle.
 - No incluir `reference/` en el repositorio: está excluido mediante `.gitignore`.
+- Crear commits atómicos después de verificar cada cambio lógico, siguiendo `.agents/rules/atomic-commits.md`. No hacer push salvo pedido explícito.
 
 ## Alcance de configuración
 
