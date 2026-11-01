@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-Este repositorio contiene un plugin independiente de KOReader que traduce la selección actual de forma contextual y muestra el resultado en un popup, sin modificar ni reemplazar el texto del libro.
+Este repositorio contiene un plugin independiente de KOReader que ofrece una traducción contextual de la selección actual y, cuando aporta valor, una breve nota sobre su matiz. Muestra el resultado en un popup, sin modificar ni reemplazar el texto del libro.
 
 ## Reglas de trabajo
 
@@ -10,7 +10,7 @@ Este repositorio contiene un plugin independiente de KOReader que traduce la sel
 - Seguir la skill externa [KOReader Plugin Development](https://github.com/uttam-salamander/koreader-dev/tree/main/skills/koreader-plugin-dev) para la estructura base, ciclo de vida, widgets y persistencia estándar de KOReader.
 - Antes de decidir cómo interactuar con KOReader, consultar la copia local de X-Ray en `reference/xray.koplugin`.
 - Tratar X-Ray como referencia de comportamiento para hooks de selección, botones de diccionario, popups, requests asíncronos, cancelación y extracción de contexto.
-- No incorporar funcionalidades ajenas al alcance: reemplazo de selección, copia automática, diccionario, escaneo del libro, personajes, timeline o cache de X-Ray.
+- No incorporar funcionalidades ajenas al alcance: reemplazo de selección, copia automática, diccionario independiente, escaneo del libro, personajes, timeline o cache de X-Ray.
 - Probar la lógica pura de Lua fuera de KOReader siempre que sea posible.
 - Como no se dispone del emulador de KOReader, reservar las pruebas visuales y de interacción final para el Kindle.
 - No incluir `reference/` en el repositorio: está excluido mediante `.gitignore`.
@@ -29,8 +29,8 @@ El idioma origen se detecta automáticamente y el contexto se obtiene con límit
 - Mantener los mensajes y la UI legibles en pantallas e-ink pequeñas.
 - Toda solicitud de red debe tener timeout, cancelación y manejo de errores.
 - No enviar el libro completo: solo la selección y contexto cercano limitado.
-- Traducir únicamente el texto seleccionado; el contexto sirve solo para desambiguar.
+- Traducir únicamente el texto seleccionado; el contexto sirve para desambiguar y apoyar una nota breve cuando sea útil, sin añadir hechos inventados.
 
 ## Estado del trabajo
 
-El plan se considera terminado cuando existe en `plans/ai-translate-plan.md`. Solo renombrarlo a `plans/ai-translate-plan-[done].md` después de completar y verificar toda la implementación.
+El plan inicial se considera terminado cuando existe como `plans/ai-translate-plan-[done].md`, después de completar y verificar la implementación.
